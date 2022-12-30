@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="=UTF-8">
+        <title>Title</title>
+        <script>
+            var xhr=new XMLHttpRequest();
+            xhr.open("GET","http://chakerbm.tn/ajax/src1/liste.php",true);
+            xhr.send();
+            xhr.onreadystatechange= function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    console.log(xhr.responseXML)
+                    afficher(xhr.responseXML);
+                }
+            }
+            function afficher(contenu){
+                var etds= contenu.getElementsByTagName("etudiant")
+                var tab=document.getElementById("tab");
+                for(var i = 0;i<etds.length; i++){
+                    var tr=document.createElement("tr");
+
+console.log(etds[i].getAttribute("id"))
+                var td1=document.createElement("td");
+                var c1=document.createTextNode(etds[i].getAttribute("id"));
+                td1.appendChild(c1);
+                tr.appendChild(td1);
+
+                var td2=document.createElement("td");
+                var c2=document.createTextNode(etds[i].getAttribute("nom"));
+                td2.appendChild(c2);
+                tr.appendChild(td2);
+                
+                var td3=document.createElement("td");
+                var c3=document.createTextNode(etds[i].getAttribute("note"));
+                td3.appendChild(c3);
+                tr.appendChild(td3);
+                    
+                tab.appendChild(tr);
+
+                }   
+
+            }
+        </script>
+    </head>
+    <body>
+        <table id="tab">
+
+        </table>
+
+    </body>
+</html>            

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type ="text/javascript">
+            function f1() {
+                var test=confirm("vous voulez changer ou bien non !!!!");
+                if(test){
+            var x=document.getElementById("a1");
+            x.innerHTML="ENIG";
+            x.style.color="red";
+            }
+            var t2=document.getElementsByTagName("p");
+            console.log(t2);
+            t2[0].innerHTML="tessssssst";
+        }
+            function f2() {
+                var x=document.getElementById("t1");
+                x.innerHTML="GEA";
+                x.style.color="yellow";
+
+        }
+    
+          
+        </script>
+    </head>
+    <body onload="f1();">
+        <h1 id="a1">ESSAT</h1>
+        <h2 id="t1">GL/RT</h2>
+        <p onclick="f2()">text1</p>
+        <p> text2 </p>
+
+    </body>
+</html>

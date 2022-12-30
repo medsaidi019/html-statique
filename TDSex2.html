@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="=UTF-8">
+        <title>Title</title>
+        <script>
+            function f1(a){
+                var e=document.getElementById(a);
+                var mat=prompt("Donner la matiére ");
+                var ens=prompt("Donner le nom de l'enseignant");
+                e.style.color="blue";
+                e.innerHTML="<h3>"+mat+"<br>"+ens+"</h3>";
+
+            }
+        </script>
+    </head>
+    <body>
+
+        <table border="1">
+            <tr><th></th><th>8=>10</th><th>10=>12</th><th>14=>16</th><th>16=>18</th></tr>
+            <tr>
+                <th>Lundi</th><td id="a1" onclick="f1(this.id)"></td>
+                              <td id="a2" onclick="f1(this.id)"></td>
+                              <td id="a3" onclick="f1(this.id)"></td>
+                              <td id="a4" onclick="f1(this.id)"></td>
+            </tr>
+            <tr>
+                <th>Mardi</th><td id="b1" onclick="f1(this.id)"></td>
+                              <td id="b2" onclick="f1(this.id)"></td>
+                              <td id="b3" onclick="f1(this.id)"></td>
+                              <td id="b4" onclick="f1(this.id)"></td>
+            </tr>
+            <tr>
+                <th>Mercredi</th><td id="c1" onclick="f1(this.id)"></td>
+                                 <td id="c2" onclick="f1(this.id)"></td>
+                                 <td id="c3" onclick="f1(this.id)"></td>
+                                 <td id="c4" onclick="f1(this.id)"></td>
+            </tr>
+            <tr>
+                <th>Jeudi</th><td id="d1" onclick="f1(this.id)"></td>
+                              <td id="d2" onclick="f1(this.id)"></td>
+                              <td id="d3" onclick="f1(this.id)"></td>
+                              <td id="d4" onclick="f1(this.id)"></td>
+            </tr>
+            <tr>
+                <th>Vendredi</th><td id="e1" onclick="f1(this.id)"></td>
+                                 <td id="e2" onclick="f1(this.id)"></td>
+                                 <td id="e3" onclick="f1(this.id)"></td>
+                                 <td id="e4" onclick="f1(this.id)"></td>
+            </tr>
+            <tr>
+                <th>Samedi</th><td id="f1" onclick="f1(this.id)"></td>
+                               <td id="f2" onclick="f1(this.id)"></td>
+                               <td id="f3" onclick="f1(this.id)"></td>
+                               <td id="f4" onclick="f1(this.id)"></td>
+            </tr>
+        </table>
+    </body>        

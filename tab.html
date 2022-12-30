@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TITRE</title>
+    <script type="text/javascript">
+        var x;
+        x=15;
+        //alert(x);
+        //console.log(15);
+        //var tab=[10,"Saliou Diallo",20,30,"GL"];
+        /*
+        for(var i=0;i<tab.length;i++){
+            alert("la valeur de l'element "+i+" est : "+tab[i]);
+        }
+
+
+        console.log(tab);
+
+        var p=confirm("vous etes GL ???");
+        if(p){
+            console.log("vous etes RT ???");
+        }
+        else{
+            console.log("vous etes GL");
+        }
+
+        var p2=prompt("donner votre nom :");
+        console.log("le nom est "+p2)
+
+        tab.push("RT");
+        tab.unshift("GEA");
+        console.log(tab);
+
+        var m="bonjour mr Saliou";
+        var s="saliou;salah;Daly;aya;emna";
+        var t=s.split(";")
+        console.log(t);
+
+
+        function test1(){
+            alert("bjr")
+        }
+
+        function test2(a, b){
+            return a+b;
+        }
+        test1();
+
+        var x1=test2(20,30);
+
+        var test3=function(){
+
+        }
+
+        (a,b)=>{return a+b ; }
+
+        console.lo  g(x1);*/
+        function f1(){
+            var test=confirm("vous voulez changer ou bien non !!!");
+            if(test){
+                var x=document.getElementById("a1");
+        x.innerHTML="ENIG";
+        x.style.color="red";
+
+            }
+          
+            var t2=document.getElementsByTagName("p");
+            console.log(t2);
+            t2[0].innerHTML="testttttttt"
+        }
+        function f2(){
+            var x2=document.getElementById("t1");
+            x2.innerHTML="GEA";
+            x2.style.color="yellow";
+        }
+        function verif(){
+            var x1=document.getElementById("i1");
+            var x2=document.getElementById("i2");
+            var x3=document.getElementById("i3");
+            if (x1.value==""){
+                var p1=document.getElementById("r1");
+                p1.innerHTML="champ obligatoire*";
+                p1.style.color="red";
+            }
+            if (x2.value==""){
+                var p2=document.getElementById("r2");
+                p2.innerHTML="champ obligatoire*";
+                p2.style.color="red";
+            }
+            if (x3.value==""){
+                var p3=document.getElementById("r3");
+                p3.innerHTML="champ numerique*";
+                p3.style.color="red";
+            }
+        }
+    </script>
+</head>
+<body onload="f1()">
+    <h1 id="a1">ESSAT</h1>
+    <h2 id="t1">GL/RT</h2>
+    <p onclick="f2()"> text1 </p>
+    <p> text2 </p>
+    <table>
+        <tr>
+            <td>Nom</td><td><input type="text" id="i1"/><p id="r1"></p></td>
+        </tr>
+        <tr>
+            <td>Prenom</td><td><input type="text" id="i2"/><p id="r2"></p></td>
+        </tr>
+        <tr>
+            <td>CIN</td><td><input type="text" id="i3"/><p id="r3"></p></td>
+        </tr>
+    </table>
+    <input type="button" onclick="verif()" value="valider">
+</body>
+</html>

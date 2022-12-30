@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="=UTF-8">
+        <title>Title</title>
+        <script>
+
+            function updateNom(x) {
+                var el=document.getElementById(x);
+                var s=prompt("donner un new nom")
+                el.innerHTML=s;
+            }
+            function ajouter() {
+                var t=document.getElementById("tab");
+                var n=t.childNodes.length;
+
+                var nom=prompt("Donner le nom de l'etudiant");
+                var note=prompt("Sonner la note de l'etudiant");
+                var a1=document.createElement("tr");
+                a1.id="ligne"+n;
+
+                var b1=document.createElement("td");
+                var c1=document.createTextNode(n-1);
+                b1.appendChild(c1);
+                a1.appendChild(b1);
+
+                var b2=document.createElement("td");
+                b2.id="nom"+n;
+                b2.setAttribute("onclick","updateNom(\"nom"+n+"\")");
+                var c2=document.createTextNode(nom);
+                b2.appendChild(c2);
+                a1.appendChild(b2);
+
+                0
+
+                var b4=document.createElement("td");
+                b4.innerHTML="<a href='#' onclick='supp(\"ligne"+n+"\")'>supprimer</a>"
+                
+                a1.appendChild(b4);
+
+                t.appendChild(a1);
+
+            }
+            function supp(x){
+                var a=document.getElementById(x);
+                var t=document.getElementById("tab");
+                t.removeChild(a);
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Gestion des Etudiants</h1>
+        <table border="1" id="tab">
+            <tr><th>ID</th><th>Nom</th><th>Note</th><th>Action</th></tr>
+        </table> 
+        <input type="button" value="Ajouter un ETD" onclick="ajouter();" >  
+    </body>    

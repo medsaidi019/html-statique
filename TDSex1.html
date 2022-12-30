@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="=UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            function calcul(){
+                var a= document.getElementById("a").value;
+                var b= document.getElementById("b").value;
+                var op= document.getElementById("op");
+                var v= op.options[op.selectedIndex].value;
+                var r=document.getElementById("resultat");
+                if(v=="add"){
+                    var s=parseFloat(a) + parseFloat(b);
+                    r.innerHTML=s;
+                   // alert("l'addition est : "+s);
+                }
+                if(v=="soustraction"){
+                    var s1=parseFloat(a) - parseFloat(b);
+                    r.innerHTML=s1;
+                    //alert("la soustraction est : "+s1)
+                }
+                if(v=="modulo"){
+                    var s2=parseFloat(a) % parseFloat(b);
+                    r.innerHTML=s2;
+                    //alert ("le modulo est " + s2);
+                }
+                if(v=="valeur AB"){
+                    var s3=Math.abs(parseFloat(a));
+                    r.innerHTML=s3;
+                    //alersert("la valeur absolu est : " +s3);
+                }
+            }
+                function f1() {
+                    var e= document.getElementById("b");
+                    var op= document.getElementById("op");
+                    var v= op.options[op.selectedIndex].value;
+                    if(v=="valeur AB"){
+                        e.setAttribute("disabled","true");
+                    }else{
+                        e.removeAttribute("disabled");
+
+                    }
+          }
+
+            
+        </script>
+    </head>
+    <body>
+        <h1>Calc</h1>
+        <p> valeur 1 <input type="text" name="a1" id="a" > </p>
+        <p> valeur 2 <input type="text" name="a2" id="b" > </p>
+        <p>
+            <select id="op" onchange="f1();">
+                <option value="add" >add</option>
+                <option value="soustraction" >soustraction</option>
+                <option value="modulo" >modulo</option>
+                <option value="valeur AB">valeur AB</option>
+            </select>
+            <input type="button" value="calculer" onclick="calcul();">
+        
+        </p>
+        <p id="resultat"> Ici on trouvera le résultat </p>
+    </body>
+</html>
